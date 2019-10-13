@@ -21,6 +21,15 @@ export default function calculate(obj, buttonName) {
     };
   }
 
+  if (buttonName === "Del") {
+    const result = operate(obj.next, obj.total, buttonName);
+    return {
+      total: result,
+      next: result,
+      operation: buttonName
+    }
+  }
+
   if (isNumber(buttonName)) {
     if (buttonName === "0" && obj.next === "0") {
       return {};
