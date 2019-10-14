@@ -26,7 +26,7 @@ export default function calculate(obj, buttonName) {
     return {
       total: result,
       next: result,
-      operation: buttonName
+      operation: null
     }
   }
 
